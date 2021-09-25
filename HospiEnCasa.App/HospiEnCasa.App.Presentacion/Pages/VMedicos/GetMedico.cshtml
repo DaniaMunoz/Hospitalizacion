@@ -1,0 +1,47 @@
+﻿@page
+@model HospiEnCasa.App.Presentacion.Pages.GetMedicoModel
+@{
+}
+
+<!--Copiamos y pegamos todo de GetMedicos y cambiamoss el foreach -->
+<table class="table">
+  <h1> Lista de médicos </h1>
+
+  <thead>
+
+    <tr>
+      <th scope="col">Id</th>
+      
+      <th scope="col">Nombre</th>
+      <th scope="col">Apellidos</th>
+      <th scope="col">Género</th>
+      <th scope="col">Número telefono</th>
+      <th scope="col">Especialidad</th>
+      <th scope="col">Código</th>
+      <th scope="col">Registro Rethus</th>
+    </tr>
+
+  </thead>
+
+  <tbody>
+  
+    <tr>
+      <!--Eliminamos el foreach y anteponemos el MODEL -->
+      <td>@Model.Medico.Id</td>
+      <td>@Model.Medico.Nombre</td>
+      <td>@Model.Medico.Apellidos</td>
+      <td>@Model.Medico.Genero</td>
+      <td>@Model.Medico.NumeroTelefono</td>  
+      <td>@Model.Medico.Especialidad</td>
+      <td>@Model.Medico.Codigo</td>
+      <td>@Model.Medico.RegistroRethus</td>
+      
+    </tr>
+
+
+
+  </tbody>
+
+    
+
+</table>

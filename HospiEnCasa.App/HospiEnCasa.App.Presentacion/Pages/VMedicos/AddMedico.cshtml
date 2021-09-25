@@ -1,0 +1,60 @@
+﻿@page
+@model HospiEnCasa.App.Presentacion.Pages.AddMedicoModel
+@{
+}
+
+<form method="post">
+  
+  <div asp-validation-sumary="ModelOnly"></div>
+  
+  <div class="form-group">
+    <label>Nombre</label>
+    <input type="text" class="form-control"  asp-for="Medico.Nombre" class= "form-control" placeholder="Digite el nombre">
+    <span asp-validation-for="Medico.Nombre" class="text-danger"> </span>
+  </div>
+
+  <div class="form-group">
+    <label>Apellidos</label>
+    <input type="text" class="form-control"  asp-for="Medico.Apellidos" class= "form-control" placeholder="Digite el apellido">
+    <span asp-validation-for="Medico.Apellidos" class="text-danger"> </span>
+  </div>
+
+  <div class="form-group">
+    <label>Numero telefónico</label>
+    <input type="text" class="form-control"  asp-for="Medico.NumeroTelefono" class= "form-control" placeholder="Digite el teléfono">
+    <span asp-validation-for="Medico.NumeroTelefono" class="text-danger"> </span>
+  </div>
+
+  <div class="form-group">
+    <label>Especialidad</label>
+    <input type="text" asp-for="Medico.Especialidad" class="form-control"   placeholder="Digite especialidad médica">
+    <span asp-validation-for="Medico.Especialidad" class="text-danger"> </span>
+  </div>
+
+
+  <div class="form-group">
+    <label>Código</label>
+    <input type="text" asp-for="Medico.Codigo" class="form-control"   placeholder="Digite código del médico">
+    <span asp-validation-for="Medico.Codigo" class="text-danger"> </span>
+  </div>
+
+  <div class="form-group">
+    <label>Registro Rethus</label>
+    <input type="text" asp-for="Medico.RegistroRethus" class="form-control"   placeholder="Digite registro rethus">
+    <span asp-validation-for="Medico.RegistroRethus" class="text-danger"> </span>
+  </div>
+
+
+  <div class="form-group">
+    <label>Genero</label>
+    <select asp-for="Medico.Genero" class="form-control" > 
+      <option selected>Genero </option> 
+      <option value= 0>Masculino</option>
+      <option value= 1>Femenino</option>
+    </select>
+  </div>
+
+
+  <button type="submit" class="btn btn-primary" asp-page-handler="Save">Crear</button> <!-- Este save es el que se pasa a AddMedico.cs --> 
+</form>
+

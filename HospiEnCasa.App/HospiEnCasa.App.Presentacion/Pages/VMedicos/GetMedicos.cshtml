@@ -1,0 +1,45 @@
+﻿@page
+@model HospiEnCasa.App.Presentacion.Pages.GetMedicosModel
+@{
+}
+
+<body style="background-color:#F0F8FF;">
+
+<table class="table">
+  <div class="p-3 mb-2 bg-info text-dark"><h1>Lista de médicos</h1></div>
+  <thead>
+
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Apellidos</th>
+      <th scope="col">Número telefono</th>
+      <th scope="col">Especialidad</th>
+      <th scope="col">Detalles</th> 
+    </tr>
+
+  </thead>
+
+  <tbody>
+  @foreach (var medico in Model.ListaMedicos)
+  {
+    <tr>
+      
+      <td>@medico.Id</td>
+      <td>@medico.Nombre</td>
+      <td>@medico.Apellidos</td>
+      <td>@medico.NumeroTelefono</td>  
+      <td>@medico.Especialidad</td>
+      <td> <a asp-page= "./GetMedico" asp-route-id= "@medico.Id">Details</a></td> 
+    </tr>
+
+  }
+
+  </tbody>
+
+    
+
+</table>
+<img alt="doctor" src="https://d2lcsjo4hzzyvz.cloudfront.net/blog/wp-content/uploads/2020/10/07114553/me%CC%81dicos-influencers-en-Instagram.jpg" />
+
+</body>
