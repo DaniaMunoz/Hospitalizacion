@@ -5,8 +5,9 @@ using HospiEnCasa.App.Dominio;
 namespace HospiEnCasa.App.Persistencia
 {
     public class AppContext : DbContext
-    {
+    { 
         //Colocamos solamente las entidades, género y tipo signo son enum 
+        
         public DbSet<Persona> Personas {get;set;}
         public DbSet<Enfermera> Enfermeras {get;set;}
         public DbSet<Medico> Medicos {get;set;}
