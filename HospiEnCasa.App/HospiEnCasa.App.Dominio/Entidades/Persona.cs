@@ -13,7 +13,7 @@ namespace HospiEnCasa.App.Dominio
         [Required (ErrorMessage= "Ingrese el Nombre")]
         //Nombre de cada persona
         public string Nombre{get;set;}
-        [Required (ErrorMessage= "Ingrese el Apellido")]
+        [Required (ErrorMessage= "Ingrese el Apellidos")]
         //Apellidos de cada persona 
         public string Apellidos{get;set;}
         [Required (ErrorMessage= "Ingrese el número de teléfono")]
