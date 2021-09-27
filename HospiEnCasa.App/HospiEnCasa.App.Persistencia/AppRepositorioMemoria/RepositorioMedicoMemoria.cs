@@ -46,6 +46,20 @@ namespace HospiEnCasa.App.Persistencia
         }
         
 
+        public IEnumerable<Medico> GetFilter(string filtro=null)
+        {
+            var medicos= GetAll();
+            if (medicos!= null) //Filtro para que existan pacientes
+            {
+                if(!String.IsNullOrEmpty(filtro))
+                {
+                    medicos=medicos.Where(m=> m.Nombre.Contains(filtro));
+                }
+            }
+            return medicos;
+        }
+
+
         public Medico Add(Medico medico)
         {
             throw new NotImplementedException();

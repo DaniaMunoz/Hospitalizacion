@@ -17,6 +17,12 @@ namespace HospiEnCasa.App.Presentacion.Pages_VMedicos
         private readonly IRepositorioMedicoMemoria RepositorioMedicoMemoria;
         public IEnumerable<Medico> Medicos {get;set;}
         
+        //Clase 27 sept
+        [BindProperty(SupportsGet=true)]
+        public string GetFilters {get;set;}
+
+
+
         //Constructor
         public IndexModel (IRepositorioMedicoMemoria RepositorioMedicoMemoria)
         {
@@ -26,9 +32,10 @@ namespace HospiEnCasa.App.Presentacion.Pages_VMedicos
 
 
 
-        public void OnGet()
+        public void OnGet(string GetFilters)
         {
-            Medicos=RepositorioMedicoMemoria.GetAll();
+            //Medicos=RepositorioMedicoMemoria.GetAll();
+            Medicos=RepositorioMedicoMemoria.GetFilter(GetFilters);
         }
     }
 }
