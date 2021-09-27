@@ -6,73 +6,65 @@ using System.Linq;//Importante incluirlo
 
 namespace HospiEnCasa.App.Persistencia
 {
-    public class RepositorioPacienteMemoria: IRepositorioPacienteMemoria
+    public class RepositorioMedicoMemoria: IRepositorioMedicoMemoria
     {
         
-        List<Paciente> Pacientes;
+        List<Medico> Medicos;
         
         //Creamos método constructor donde inicializamos variables
-        public RepositorioPacienteMemoria()
+        public RepositorioMedicoMemoria()
         {
 
-            Pacientes=new List<Paciente>() //Aquí es donde almacenamos la info mientras 
+            Medicos=new List<Medico>() //Aquí es donde almacenamos la info mientras 
             {
-                new Paciente
+                new Medico
                 {
                     Id=1,
                     Nombre= "Martin",
                     Apellidos= "Valenzuela",
                     NumeroTelefono="3004598",
                     Genero= Genero.Masculino,
-                    Direccion="Calle 4",
-                    Longitud=55,
-                    Latitud=70,
-                    Ciudad="Buga",
-                    FechaNacimiento=new DateTime(1995,05,05)
+                    Especialidad="Dermatólogo"
                 },
 
-                new Paciente
+                new Medico
                 {
                     Id=2,
                     Nombre= "Julia",
                     Apellidos= "Mera",
                     NumeroTelefono="3004598",
                     Genero= Genero.Masculino,
-                    Direccion="Calle 4",
-                    Longitud=55,
-                    Latitud=70,
-                    Ciudad="Tuluá",
-                    FechaNacimiento=new DateTime(1999,05,05)
+                    Especialidad="Cardiólogo"
                 }
             };
         }
         
     
-        public IEnumerable<Paciente> GetAll()
+        public IEnumerable<Medico> GetAll()
         {
-            return Pacientes; //Retorna la lista que se llama pacientes
+            return Medicos; //Retorna la lista que se llama pacientes
         }
         
 
-        public Paciente Add(Paciente paciente)
+        public Medico Add(Medico medico)
         {
             throw new NotImplementedException();
         }
 
 
-        public Paciente Update (Paciente paciente)
+        public Medico Update (Medico medico)
         {
             throw new NotImplementedException();
         }
 
 
-        public void Delete(int idPaciente)
+        public void Delete(int idMedico)
         {
             throw new NotImplementedException();
         }
 
 
-        public Paciente Get(int idPaciente)
+        public Medico Get(int idMedico)
         {
             throw new NotImplementedException();
         }

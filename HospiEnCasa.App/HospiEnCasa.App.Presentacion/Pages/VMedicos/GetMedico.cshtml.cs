@@ -21,40 +21,40 @@ namespace HospiEnCasa.App.Presentacion.Pages
             
             Medico M1= new Medico
             {
-            Id=1,
-            Nombre= "Martin",
-            Apellidos= "Valenzuela",
-            NumeroTelefono="3004598",
-            Genero= Genero.Masculino,
-            Especialidad="Pediatría",
-            Codigo="456789",
-            RegistroRethus="4444"
+                Id=1,
+                Nombre= "Martin",
+                Apellidos= "Valenzuela",
+                NumeroTelefono="3004598",
+                Genero= Genero.Masculino,
+                Especialidad="Pediatría",
+                Codigo="456789",
+                RegistroRethus="4444"
             };
 
-        Medico M2= new Medico
-        {
-            Id=2,
-            Nombre= "Tatiana",
-            Apellidos= "Ramirez",
-            NumeroTelefono="3004598",
-            Genero= Genero.Femenino,
-            Especialidad="Neurología",
-            Codigo="456789",
-            RegistroRethus="4444"
-        };
+            Medico M2= new Medico
+            {
+                Id=2,
+                Nombre= "Tatiana",
+                Apellidos= "Ramirez",
+                NumeroTelefono="3004598",
+                Genero= Genero.Femenino,
+                Especialidad="Neurología",
+                Codigo="456789",
+                RegistroRethus="4444"
+            };
 
 
-        Medico M3= new Medico
-        {
-            Id=3,
-            Nombre= "Rubeira",
-            Apellidos= "Muñoz",
-            NumeroTelefono="456000",
-            Genero= Genero.Femenino,
-            Especialidad="Cardiología",
-            Codigo="456789",
-            RegistroRethus="5555"
-        };
+            Medico M3= new Medico
+            {
+                Id=3,
+                Nombre= "Rubeira",
+                Apellidos= "Muñoz",
+                NumeroTelefono="456000",
+                Genero= Genero.Femenino,
+                Especialidad="Cardiología",
+                Codigo="456789",
+                RegistroRethus="5555"
+            };
        
         
 

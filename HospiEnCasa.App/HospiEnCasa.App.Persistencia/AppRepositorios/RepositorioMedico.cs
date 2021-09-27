@@ -11,7 +11,7 @@ namespace HospiEnCasa.App.Persistencia
     {
         private readonly AppContext _appContext;
 
-        public RepositorioMedico (AppContext appContext)
+        public RepositorioMedico (AppContext appContext) //cosntructor donde inicializamos variables
         {
             _appContext=appContext;
         }
