@@ -1,5 +1,5 @@
 ﻿@page
-@model HospiEnCasa.App.Presentacion.Pages.GetMedicosModel
+@model HospiEnCasa.App.Presentacion.Pages_VMedicos.IndexModel
 @{
 }
 <!-- La segunda líneaIndica con quién está "emparejado" que es Index Model (la clase de Index.cshtml.cs)  -->
@@ -11,14 +11,17 @@
     <p>
     Medico:<input type="text" name= "GetFilters" asp-for="GetFilters" />
     <input type= "submit" value="Filter"/>
+</form>
 <table class="table table-bordered">
     <thead>
     <tr> <th scope="col">Nombre</th>
         <th scope="col">Apellidos</th>
         <th scope="col">Telefono</th>
         <th scope="col">Género</th>
-        <th scope="col">Options</th>
-        <span class= "material-icons">add</span></a></th>
+        <th scope="col">Options <a asp-page="./Create" >
+            <span class= "material-icons">add</span></a></th>
+        
+        
     </tr>
     </thead>
 
@@ -31,6 +34,7 @@
         <td>@medico.NumeroTelefono </td>
         <td>@medico.Genero </td>
         <td>
+             
             <a asp-page="./Details" asp-route-id="@medico.Id">
             <span class="material-icons">description</span></a>
             <a asp-page="./Edit"  asp-route-id="@medico.Id">

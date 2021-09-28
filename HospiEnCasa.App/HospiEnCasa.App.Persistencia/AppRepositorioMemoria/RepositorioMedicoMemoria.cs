@@ -24,7 +24,9 @@ namespace HospiEnCasa.App.Persistencia
                     Apellidos= "Valenzuela",
                     NumeroTelefono="3004598",
                     Genero= Genero.Masculino,
-                    Especialidad="Dermatólogo"
+                    Especialidad="Dermatólogo",
+                    Codigo="789",
+                    RegistroRethus="111"
                 },
 
                 new Medico
@@ -34,7 +36,9 @@ namespace HospiEnCasa.App.Persistencia
                     Apellidos= "Mera",
                     NumeroTelefono="3004598",
                     Genero= Genero.Masculino,
-                    Especialidad="Cardiólogo"
+                    Especialidad="Cardiólogo",
+                    Codigo="789",
+                    RegistroRethus="999"
                 }
             };
         }
@@ -62,7 +66,9 @@ namespace HospiEnCasa.App.Persistencia
 
         public Medico Add(Medico medico)
         {
-            throw new NotImplementedException();
+            medico.Id=Medicos.Max(m=>m.Id)+1;
+            Medicos.Add(medico);
+            return medico;
         }
 
 
@@ -80,7 +86,7 @@ namespace HospiEnCasa.App.Persistencia
 
         public Medico Get(int idMedico)
         {
-            throw new NotImplementedException();
+            return Medicos.SingleOrDefault(m=>m.Id==idMedico);
         }
     }
 }

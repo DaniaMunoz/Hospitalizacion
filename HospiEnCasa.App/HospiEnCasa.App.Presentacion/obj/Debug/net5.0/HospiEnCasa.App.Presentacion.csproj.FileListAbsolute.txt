@@ -80,3 +80,5 @@ C:\Hospitalizacion\HospiEnCasa.App\HospiEnCasa.App.Presentacion\obj\Debug\net5.0
 C:\Hospitalizacion\HospiEnCasa.App\HospiEnCasa.App.Presentacion\obj\Debug\net5.0\Razor\Pages\Pacientes\Edit.cshtml.g.cs
 C:\Hospitalizacion\HospiEnCasa.App\HospiEnCasa.App.Presentacion\obj\Debug\net5.0\Razor\Pages\Pacientes\Index.cshtml.g.cs
 C:\Hospitalizacion\HospiEnCasa.App\HospiEnCasa.App.Presentacion\obj\Debug\net5.0\Razor\Pages\VMedicos\Index.cshtml.g.cs
+C:\Hospitalizacion\HospiEnCasa.App\HospiEnCasa.App.Presentacion\obj\Debug\net5.0\Razor\Pages\VMedicos\Details.cshtml.g.cs
+C:\Hospitalizacion\HospiEnCasa.App\HospiEnCasa.App.Presentacion\obj\Debug\net5.0\Razor\Pages\VMedicos\Create.cshtml.g.cs

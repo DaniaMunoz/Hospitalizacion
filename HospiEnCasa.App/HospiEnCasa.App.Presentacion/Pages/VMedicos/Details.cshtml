@@ -1,0 +1,38 @@
+﻿@page
+@model HospiEnCasa.App.Presentacion.Pages_VMedicos.DetailsModel
+@{
+}
+<h1>Details</h1>
+<div class="form-group">
+    <h4>Medico</h4>
+    <dl class="row">
+            <dt class="col-sm-2">Nombre</dt>
+        <dd class="col-sm-10">@Model.Medico.Nombre</dd>
+
+            <dt class="col-sm-2">Apellidos</dt>
+        <dd class="col-sm-10">@Model.Medico.Apellidos</dd>
+
+            <dt class="col-sm-2">Numero de teléfono</dt>
+        <dd class="col-sm-10">@Model.Medico.NumeroTelefono</dd>
+
+            <dt class="col-sm-2">Genero</dt>
+        <dd class="col-sm-10">@Model.Medico.Genero</dd>
+
+            <dt class="col-sm-2">Especialidad</dt>
+        <dd class="col-sm-10">@Model.Medico.Especialidad</dd>
+
+            <dt class="col-sm-2">Codigo</dt>
+        <dd class="col-sm-10">@Model.Medico.Codigo</dd>
+
+            <dt class="col-sm-2">Registro Rethus</dt>
+        <dd class="col-sm-10">@Model.Medico.RegistroRethus</dd>
+
+    </dl>
+
+
+</div>
+<a asp-page="./Edit" asp-route-id="@Model.Medico.Id">Edit |Regresar</a>
+<!--<a asp-page="./Index">Back to List</a>-
+Añado ícono
+-->
+

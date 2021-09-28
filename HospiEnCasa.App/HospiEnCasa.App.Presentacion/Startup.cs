@@ -24,6 +24,9 @@ namespace HospiEnCasa.App.Presentacion
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            //Tengo que seguir añadiendo los elementos por cada entidad 
+
+            services.AddSingleton<IRepositorioMedicoMemoria, RepositorioMedicoMemoria>();
             services.AddSingleton<IRepositorioPacienteMemoria, RepositorioPacienteMemoria>(); //Coloca esta parte
             services.AddRazorPages();
         }

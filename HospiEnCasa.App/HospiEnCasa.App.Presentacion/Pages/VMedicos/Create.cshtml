@@ -1,0 +1,59 @@
+﻿@page
+@model HospiEnCasa.App.Presentacion.Pages_VMedicos.CreateModel
+@{
+}
+
+<form method="post">
+  
+  <div asp-validation-sumary="ModelOnly"></div>
+  
+  <div class="form-group">
+    <label>Nombre</label>
+    <input  asp-for="Medico.Nombre" class= "form-control" />
+   
+  </div>
+
+  <div class="form-group">
+    <label>Apellidos</label>
+    <input asp-for="Medico.Apellidos" class= "form-control" />
+   
+  </div>
+
+  <div class="form-group">
+    <label>Numero telefónico</label>
+    <input  asp-for="Medico.NumeroTelefono" class= "form-control" />
+    
+  </div>
+
+  <div class="form-group">
+    <label>Especialidad</label>
+    <input  asp-for="Medico.Especialidad" class="form-control"   />
+    
+  </div>
+
+
+  <div class="form-group">
+    <label>Código</label>
+    <input  asp-for="Medico.Codigo" class="form-control"  />
+    
+  </div>
+
+  <div class="form-group">
+    <label>Registro Rethus</label>
+    <input asp-for="Medico.RegistroRethus" class="form-control"   />
+    
+  </div>
+
+
+  <div class="form-group">
+    <label>Genero</label>
+    <select asp-for="Medico.Genero" class="form-control" > 
+      <option selected>Genero </option> 
+      <option value= 0>Masculino</option>
+      <option value= 1>Femenino</option>
+    </select>
+  </div>
+
+
+  <button type="submit" class="btn btn-primary" asp-page-handler="Save">Crear</button> <!-- Este save es el que se pasa a AddMedico.cs --> 
+</form>
