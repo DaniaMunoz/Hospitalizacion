@@ -1,0 +1,30 @@
+﻿@page
+@model HospiEnCasa.App.Presentacion.Pages_VMedicos.DeleteModel
+@{
+}
+<h1>Seguro que quiere eliminar paciente</h1>
+
+<div class="form-group">
+<h4>Medico</h4>
+
+<dl class ="row">
+<dt class= "col-sm-2">Nombre</dt>
+<dd calss="col-sm-10">@Model.Medico.Nombre</dd>
+<dt class= "col-sm-2">Apellidos</dt>
+<dd calss="col-sm-10">@Model.Medico.Apellidos</dd>
+<dt class= "col-sm-2">NumeroTelefono</dt>
+<dd calss="col-sm-10">@Model.Medico.NumeroTelefono</dd>
+<dt class= "col-sm-2">Genero</dt>
+<dd calss="col-sm-10">@Model.Medico.Genero</dd>
+
+
+
+</dl>
+
+</div>
+
+<form method="post">
+    <input type="hidden" asp-for="Medico.Id" />
+    <button type="submit" class="btn btn-primary" asp-page-handler="Delete">Eliminar</button> 
+    <a asp-for="./Index"> Back </a>
+</form>

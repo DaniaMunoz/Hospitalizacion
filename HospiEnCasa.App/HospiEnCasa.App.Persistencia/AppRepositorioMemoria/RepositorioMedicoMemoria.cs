@@ -64,23 +64,39 @@ namespace HospiEnCasa.App.Persistencia
         }
 
 
-        public Medico Add(Medico medico)
+        public Medico Add(Medico Medico)
         {
-            medico.Id=Medicos.Max(m=>m.Id)+1;
-            Medicos.Add(medico);
-            return medico;
+            Medico.Id=Medicos.Max(m=>m.Id)+1;
+            Medicos.Add(Medico);
+            return Medico;
         }
 
 
         public Medico Update (Medico medico)
         {
-            throw new NotImplementedException();
+            var medicoEncontrado=Medicos.SingleOrDefault(m=>m.Id==medico.Id);
+            if (medicoEncontrado != null)
+            {
+                medicoEncontrado.Nombre=medico.Nombre;
+                medicoEncontrado.Apellidos=medico.Apellidos;
+                medicoEncontrado.NumeroTelefono=medico.NumeroTelefono;
+                medicoEncontrado.Genero=medico.Genero;
+                medicoEncontrado.Especialidad=medico.Especialidad;
+                medicoEncontrado.Codigo=medico.Codigo;
+                medicoEncontrado.RegistroRethus=medico.RegistroRethus;
+
+            }
+            return medicoEncontrado;
+
         }
 
 
         public void Delete(int idMedico)
         {
-            throw new NotImplementedException();
+            var medico=Medicos.SingleOrDefault(m=>m.Id==idMedico);
+            if (medico==null)
+                return;
+                Medicos.Remove(medico);
         }
 
 

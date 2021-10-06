@@ -7,31 +7,37 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 using HospiEnCasa.App.Dominio;
 using HospiEnCasa.App.Persistencia;
 
-namespace HospiEnCasa.App.Presentacion.Pages_VMedicos
+namespace HospiENCasa.App.Presentacion.Pages
 {
-    public class DetailsModel : PageModel
+    public class EditModel : PageModel
     {
-        public readonly IRepositorioMedicoMemoria RepositorioMedicoMemoria;
-        public Medico Medico{get;set;}
-        public DetailsModel(IRepositorioMedicoMemoria RepositorioMedicoMemoria)
+        private readonly IRepositorioMedicoMemoria RepositorioMedicoMemoria;
+        [BindProperty]
+        public Medico Medico {get;set;}
+        public EditModel(IRepositorioMedicoMemoria RepositorioMedicoMemoria)
         {
             this.RepositorioMedicoMemoria=RepositorioMedicoMemoria;
-
         }
 
-
-
         public IActionResult OnGet(int id)
+
         {
             Medico=RepositorioMedicoMemoria.Get(id);
             if(Medico==null)
             {
-                return RedirectToPage("./NotFound");
+                return RedirectToPage("./NotFound"); 
             }
-            else
-            {
+            else{
                 return Page();
+
             }
+
+        }
+
+        public IActionResult OnPostEdit()
+        {
+            Medico=RepositorioMedicoMemoria.Update(Medico);
+            return Page();
         }
     }
 }

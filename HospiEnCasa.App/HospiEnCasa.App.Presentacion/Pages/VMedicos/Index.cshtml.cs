@@ -21,16 +21,11 @@ namespace HospiEnCasa.App.Presentacion.Pages_VMedicos
         [BindProperty(SupportsGet=true)]
         public string GetFilters {get;set;}
 
-
-
         //Constructor
         public IndexModel (IRepositorioMedicoMemoria RepositorioMedicoMemoria)
         {
             this.RepositorioMedicoMemoria=RepositorioMedicoMemoria;
         }
-
-
-
 
         public void OnGet(string GetFilters)
         {

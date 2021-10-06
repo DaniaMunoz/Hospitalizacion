@@ -1,0 +1,46 @@
+﻿@page
+@model HospiEnCasa.App.Presentacion.Pages_Pacientes.ToAssignMedicoModel
+@{
+}
+<form method="post">
+    <input type="hidden" asp-for="Paciente.Id"/>
+<h1>Asignar Medico</h1>
+<table class="table table-bordered">
+<table class="table">
+   <thead>
+   <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Apellidos</th>
+      <th scope="col">Número de Teléfono</th>
+      <th scope="col">Género</th>
+      <th scope="col">Código</th>
+      <th scope="col">Registro Rethus</th>
+      <th scope="col">Opciones</th>
+   </tr>
+   <thead> 
+
+   @foreach(var medico in Model.Medicos)
+   {
+   <tbody>
+       <tr> 
+           <td>@medico.Id</td>
+           <td>@medico.Nombre</td>
+           <td>@medico.Apellidos</td>
+           <td>@medico.NumeroTelefono</td>
+           <td>@medico.Genero</td>
+           <td>@medico.Codigo</td>
+           <td>@medico.RegistroRethus</td>
+            <td>
+            <input type="checkBox" name="medicoId" value ="@medico.Id"/> 
+           </td>
+      </tr>
+  </tbody>
+   }
+
+</table>
+<button type="submit" class="btn btn-primary" asp-page-handler="ToAssign">Asignar</button>
+
+</form>
+
+    

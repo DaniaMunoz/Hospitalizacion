@@ -9,6 +9,15 @@ namespace HospiEnCasa.App.Presentacion.Pages_Pacientes
 {
     public class DeleteModel : PageModel
     {
+        
+
+
+
+
+
+
+
+        //
         public void OnGet()
         {
         }

@@ -2,3 +2,69 @@
 @model HospiEnCasa.App.Presentacion.Pages_Pacientes.CreateModel
 @{
 }
+<h1>Registrar paciente </h1>
+<form method= "post">
+  <div asp-validation-sumary="ModelOnly"></div>
+
+   <div class="form-group">
+    <label>Nombre</label>
+    <input asp-for="Paciente.Nombre" class="form-control"/>
+    
+  </div>
+
+   <div class="form-group">
+    <label>Apellidos</label>
+    <input asp-for="Paciente.Apellidos" class="form-control"/>
+    
+  </div>
+
+   <div class="form-group">
+    <label>Número de teléfono</label>
+    <input asp-for="Paciente.NumeroTelefono" class="form-control"/>
+    
+</div>
+
+    <div class="form-group">
+    <label>Género</label>
+    <select asp-for="Paciente.Genero" class="form-control">
+    <option selected>Seleccione el Género</option>
+    <option value=0>Femenino</option>
+    <option value=1>Masculino</option>
+    </select>
+    </div>
+
+<div class="form-group">
+    <label>Dirección</label>
+    <input asp-for="Paciente.Direccion" class="form-control"/>
+    
+  </div>
+
+<div class="form-group">
+    <label>Latitud</label>
+   <input asp-for="Paciente.Latitud" class="form-control"/>
+    
+  </div>
+
+<div class="form-group">
+    <label>Longitud</label>
+    <input asp-for="Paciente.Longitud" class="form-control"/>
+   
+  </div>
+
+<div class="form-group">
+    <label >Ciudad</label>
+    <input asp-for="Paciente.Ciudad" class="form-control"/>
+    
+  </div>
+
+<div class="form-group">
+    <label>Fecha de Nacimiento</label>
+    <input asp-for="Paciente.FechaNacimiento" class="form-control"/>
+    
+  </div>
+
+<div class="form-group">
+  <button type="submit" class="btn btn-primary" asp-page-handler="Save">Crear</button>
+  <a asp-page="./Index">Back to list </a>
+</div>
+</form>

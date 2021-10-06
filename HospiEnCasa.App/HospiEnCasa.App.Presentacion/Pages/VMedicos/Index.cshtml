@@ -11,6 +11,8 @@
     <p>
     Medico:<input type="text" name= "GetFilters" asp-for="GetFilters" />
     <input type= "submit" value="Filter"/>
+    </p>
+</div>
 </form>
 <table class="table table-bordered">
     <thead>
@@ -29,10 +31,10 @@
     {
         <tbody>
         <tr>
-        <td>@medico.Nombre </td>
-        <td>@medico.Apellidos </td>
-        <td>@medico.NumeroTelefono </td>
-        <td>@medico.Genero </td>
+            <td>@medico.Nombre </td>
+            <td>@medico.Apellidos </td>
+            <td>@medico.NumeroTelefono </td>
+            <td>@medico.Genero </td>
         <td>
              
             <a asp-page="./Details" asp-route-id="@medico.Id">
@@ -42,7 +44,6 @@
            <a asp-page="./Delete"  asp-route-id="@medico.Id">
            <span class="material-icons">delete</span></a>
         </td>
-        </tr>
         </tbody>
     }
 
